@@ -21,7 +21,7 @@ public class Array41078 {
                     matran[i][j] = sc.nextInt();
                 }
             }
-            boolean isSymmetric = isLogoSymmetric(matran,n);
+            boolean isSymmetric = isLogoSymmetric(matran, n);
 
             System.out.println("#" + t + " " + (isSymmetric ? "YES" : "NO"));
         }

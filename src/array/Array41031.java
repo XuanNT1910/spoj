@@ -22,8 +22,8 @@ public class Array41031 {
             }
             int count = 0;
             for (int j = 0; j < n; j++) {
-                for (int l = j+1; l < n; l++) {
-                    if (Math.abs(numbers[j]-numbers[l])==k)
+                for (int l = j + 1; l < n; l++) {
+                    if (Math.abs(numbers[j] - numbers[l]) == k)
                         count++;
                 }
             }
