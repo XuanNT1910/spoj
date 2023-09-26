@@ -29,7 +29,7 @@ public class Array41032 {
             }
             for (int i = 0; i < n; i++) {
                 for (int j = i + 1; j < n; j++) {
-                    if (heights[i] > heights[j]) {
+                    if (heights[i] > heights[j] || (heights[i] == heights[j] && tallerCount[i] > tallerCount[j])) {
                         int tmp = heights[i];
                         heights[i] = heights[j];
                         heights[j] = tmp;

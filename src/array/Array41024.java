@@ -23,7 +23,7 @@ public class Array41024 {
             N = sc.nextInt();
             M = sc.nextInt();
             if (N == 0 || M == 0) break;
-            int[][] a = new int[N+1][M+1];
+            int[][] a = new int[N + 1][M + 1];
             int sQ, sK, sP;
             int[][] vQ = new int[2][100];
             int[][] vK = new int[2][100];
