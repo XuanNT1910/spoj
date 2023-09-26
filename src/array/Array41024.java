@@ -43,7 +43,7 @@ public class Array41024 {
                 y = sc.nextInt();
                 a[x][y] = 2;
                 vK[0][i] = x;
-                vK[0][i] = y;
+                vK[1][i] = y;
             }
             sP = sc.nextInt();
             for (int i = 0; i < sP; i++) {
@@ -88,9 +88,7 @@ public class Array41024 {
                     }
                 }
             }
-
             System.out.println("Board " + tc++ + " has " + res + " safe squares.");
-
         }
     }
 }
