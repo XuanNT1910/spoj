@@ -38,18 +38,24 @@ public class Array41077 {
         int N = matrix.length;
 
         while (true) {
-            int minHeight = matrix[x][y];
             int nextX = x;
             int nextY = y;
-
+            int min = Integer.MAX_VALUE;
+            int[][] abc = new int[3][8];
             for (int i = 0; i < 8; i++) {
                 int newX = x + dx[i];
                 int newY = y + dy[i];
-
-                if (newX >= 0 && newX < N && newY >= 0 && newY < N && matrix[newX][newY] < minHeight) {
-                    minHeight = matrix[newX][newY];
-                    nextX = newX;
-                    nextY = newY;
+                if (newX >= 0 && newX < N && newY >= 0 && newY < N && matrix[newX][newY] > matrix[x][y]) {
+                    abc[0][i] = matrix[newX][newY];
+                    abc[1][i] = newX;
+                    abc[2][i] = newY;
+                }
+            }
+            for (int i = 0; i < 8; i++) {
+                if (abc[0][i] < min && abc[0][i] > 0) {
+                    min = abc[0][i];
+                    nextX = abc[1][i];
+                    nextY = abc[2][i];
                 }
             }
 

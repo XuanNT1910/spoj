@@ -60,7 +60,7 @@ public class Array41024 {
                     for (int t = 1; ; t++) {
                         int dx = x + xQ[j] * t;
                         int dy = y + yQ[j] * t;
-                        if (dx > 0 && dx <= N && dy > 0 && dy <= M && (a[dx][dy] == 0 || a[dx][dy] == 4)) {
+                        if (dx > 0 && dx <= N && dy > 0 && dy <= M && (a[dx][dy] == 0)) {
                             a[dx][dy] = 4;
                         } else break;
                     }

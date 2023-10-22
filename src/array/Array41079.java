@@ -19,7 +19,7 @@ public class Array41079 {
             M = sc.nextInt();
             K = sc.nextInt();
             int sum, res = 0, x = 0, y = 0;
-            int min = 999999999;
+            int min = Integer.MAX_VALUE;
             int[][] A = new int[N][N];
             for (int i = 0; i < N; i++) {
                 for (int j = 0; j < N; j++) {
@@ -36,17 +36,11 @@ public class Array41079 {
                     }
                     int xsum = sum - K;
                     if (xsum < 0) xsum = xsum * (-1);
-                    if (xsum < min) {
+                    if (xsum < min || (xsum == min && sum < res)) {
                         res = sum;
                         min = xsum;
                         x = i;
                         y = j;
-                    } else if (xsum == min) {
-                        if (sum < res) {
-                            res = sum;
-                            x = i;
-                            y = j;
-                        }
                     }
                 }
             }
@@ -54,5 +48,4 @@ public class Array41079 {
         }
         System.out.println();
     }
-
 }
